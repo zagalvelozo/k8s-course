@@ -16,7 +16,8 @@
     "@types/mongoose": "^5.10.4",
     "bluebird": "^3.5.1",
     "express": "^4.17.1",
-    "mongoose": "^5.12.2"
+    "mongoose": "^5.12.2",
+    "uuidv4": "^6.2.7"
   },
   "devDependencies": {
     "ts-node-dev": "^1.1.6",

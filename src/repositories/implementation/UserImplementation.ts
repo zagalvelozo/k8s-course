@@ -1,7 +1,5 @@
 import { User } from "../../entities/User";
-
 import UserModel from '../schemas/UserSchema';
-
 import { IUsersRepository } from "../IUsersRepository";
 
 
@@ -17,15 +15,15 @@ export class UserImplementation implements IUsersRepository {
     }
 
     async save(user: User): Promise<void> {
-        const usr = new UserModel({ email: user.email, username: user.username });
+        const usr = new UserModel({ uuid: user.id, email: user.email, username: user.username });
         await usr.save();
     }
 
     async delete(email: string): Promise<void> {
-        UserModel.deleteOne()
+        await UserModel.deleteOne({email: email});
     }
 
     async update(user: User): Promise<void> {
-
+        
     }
 }
