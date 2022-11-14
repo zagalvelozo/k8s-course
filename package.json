@@ -1,19 +1,16 @@
 {
   "name": "clean-code",
   "version": "1.0.0",
-  "description": "",
+  "description": "API written in typescript following clean clone principles",
   "main": "index.js",
   "scripts": {
     "start": "tsnd --transpile-only --respawn src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["api", "node", "typescript", "solid"],
+  "author": "zagalvelozo",
   "license": "ISC",
   "dependencies": {
-    "@types/bluebird": "^3.5.33",
-    "@types/express": "^4.17.11",
-    "@types/mongoose": "^5.10.4",
     "bluebird": "^3.5.1",
     "express": "^4.17.1",
     "mongoose": "^5.12.2",
@@ -21,6 +18,9 @@
   },
   "devDependencies": {
     "ts-node-dev": "^1.1.6",
-    "typescript": "^4.2.3"
+    "typescript": "^4.2.3",
+     "@types/bluebird": "^3.5.33",
+    "@types/express": "^4.17.11",
+    "@types/mongoose": "^5.10.4",
   }
 }
