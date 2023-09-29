@@ -13,13 +13,13 @@ export class UpdateUserUseCase {
 
         const userAlreadyExist = await this.usersRepository.findByEmail(data.email);
         
-        if (userAlreadyExist) {
-            throw new Error("User Already Exist.");
+        if (!userAlreadyExist) {
+            throw new Error("User Do Not Exist.");
         }
 
         const user = new User(data);
 
-        await this.usersRepository.save(user);
+        await this.usersRepository.update(user);
 
         // this.mailProvider.sendMail({
         //     to: {

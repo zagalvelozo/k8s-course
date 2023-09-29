@@ -2,6 +2,7 @@ import { Router } from "express";
 import { createUserController } from "./useCases/CreateUser";
 import { deleteUserController } from "./useCases/DeleteUser";
 import { getAllUserController } from "./useCases/GetAllUsers";
+import { updateUserController } from "./useCases/UpdateUser";
 
 
 const router = Router()
@@ -16,6 +17,14 @@ router.post('/users', (request, response) => {
 
 router.delete('/users/:uuid', (request, response) => {
     return deleteUserController.handle(request, response);
+});
+
+router.put('/users/:uuid', (request, response) => {
+    return updateUserController.handle(request, response);
+});
+
+router.get('/', (request, response) => {
+    response.json(request.headers);
 });
 
 

@@ -1,11 +1,12 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "target": "ES2017",
+        "module": "CommonJS",
+        "target": "ESNext",
         "allowJs": true,
         "esModuleInterop": true,
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true,
+        "outDir": "dist"
     },
     "include": [
         "src/**/*.ts"
